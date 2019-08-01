@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>dongle</title>
+</head>
+<body>
+WELCOME TO DONGLE PAGE
+<table >
+    <thead>
+    <tr>
+        <td>Name</td>
+        <td>Amount</td>
+        <td>Validity</td>
+    </tr>
+    </thead>
+    <tbody>
+<!--    <tr th:if="${planlist.empty}">-->
+<!--        <td colspan="2"> No Plans Available</td>-->
+<!--    </tr>-->
+    <tr th:each="plans : ${planlist}">
+        <td><span th:text="${plans.dongleType}"> Name</span></td>
+        <td><span th:text="${plans.dongleAmt}"> Amount </span></td>
+        <td><span th:text="${plans.dongleValidity}"> Validity </span></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
